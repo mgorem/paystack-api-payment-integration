@@ -1,22 +1,26 @@
+//Mongoose Model for handling interactions with the DB
 //creating database schema
-const {mongoose} = require('../config/mongoose');
+const {mongoose} = require('./../config/mongoose');
+
 const donorSchema = new mongoose.Schema({
     full_name: {
-        type: String,
+        type: String, 
         required: true,
     },
     email: {
-        type: String,
+        type: String, 
         required: true,
     },
     amount: {
-        type: Number,
+        type: Number, 
         required: true,
     },
     reference: {
-        type: String,
+        type: String, 
         required: true
     }
-    });
-    const Donor = mongoose.model('Donor', donorSchema);
-    module.exports = {Donor}
+});
+
+const Donor = mongoose.model('Donor', donorSchema);
+
+module.exports = {Donor}

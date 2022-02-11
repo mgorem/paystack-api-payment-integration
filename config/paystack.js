@@ -1,5 +1,8 @@
+// Contains User-defined functions for accessing 
+// Paystack API endpoints using request module
+
 const paystack = (request) => {
-    const MySecretKey = sk_test_3da0de06d2bef76612d7619bf4d7b1c30705d0d0;
+    const MySecretKey = process.env.SECRET_KEY;
     // sk_test_xxxx to be replaced by your own secret key
     const initializePayment = (form, mycallback) => {
         const options = {
